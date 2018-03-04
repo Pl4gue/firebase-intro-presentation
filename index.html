@@ -35,22 +35,22 @@
     <link rel="import" href="code-box/code-box.html">
     <link rel="import" href="code-box/code-example.html">
 
-  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-  <script>
-    window.addEventListener('load', installCounter);
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script>
+      window.addEventListener('load', installCounter);
 
-    function installCounter() {
-      var devsRef = new Firebase("https://firebase-website.firebaseio.com/stats/signups");
-      var counterSpan = document.getElementById('current-devs');
-      devsRef.on("value", function (snap) {
-        // Use thousand separator in counter.
-        counterSpan.textContent = snap.val().toLocaleString();
-      });
-    }
+function installCounter() {
+  var devsRef = new Firebase("https://firebase-website.firebaseio.com/stats/signups");
+  var counterSpan = document.getElementById('current-devs');
+  devsRef.on("value", function (snap) {
+    // Use thousand separator in counter.
+    counterSpan.textContent = snap.val().toLocaleString();
+  });
+}
     </script>
 
     <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
+      <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
   </head>
 
@@ -69,12 +69,13 @@
         -->
         <section title="">
           <br><br>
-          <h2>Intro to Firebase</h2>
+          <h2>Firebase 101</h2>
           <img src="images/firebase-logo.png" class="no-style">
           <br> <br>
           <p>
-            <h6>YOUR_NAME / <a href="http://twitter.com/YOUR_TWITTER_HANDLE">@YOUR_TWITTER_HANDLE</a></h6>
-
+          <h6>David Wu / <a href="http://twitter.com/__pl4gue">@__pl4gue</a> /
+            <a href="http://david-wu.me">david-wu.me</a>
+          </h6>
           </p>
         </section>
 
@@ -89,7 +90,7 @@
 
         <section>
           <h3>The Full Stack</h3>
-          <img src="images/full-stack.png" alt="The Full Stack" class="no-style" />
+          <img src="images/full-stack.png" width="240px" alt="The Full Stack" class="no-style" />
         </section>
 
         <section>
@@ -104,8 +105,8 @@
         </section>
 
         <section>
-					<p class="text-medium era-point">The user doesn't care about your backend</p>
-				</section>
+          <p class="text-medium era-point">The user doesn't care about your backend</p>
+        </section>
 
         <section>
           <h4>The user expects</h4>
@@ -135,11 +136,11 @@
         </section>
 
         <section>
-					<h3>Forget the Server</h3>
-					<p class="era-point">Firebase apps can run on client-side code only</p>
-					<br>
-					<img src="images/platforms.png" alt="" class="no-style framework-logo">
-				</section>
+          <h3>Forget the Server</h3>
+          <p class="era-point">Firebase apps can run on client-side code only</p>
+          <br>
+          <img src="images/platforms.png" alt="" class="no-style framework-logo">
+        </section>
 
         <section>
           <img src="images/data-box.png" class="no-style framework-logo">
@@ -158,8 +159,8 @@
         <section>
           <h2>Realtime Data</h2>
           <p class="era-point text-cream">
-            Whenever <span class="text-discs">data is  updated in Firebase</span>,
-            it sends the update down to every <span class="text-tarheel">listening client</span>
+          Whenever <span class="text-discs">data is  updated in Firebase</span>,
+          it sends the update down to every <span class="text-tarheel">listening client</span>
           </p>
         </section>
 
@@ -176,16 +177,16 @@
           <h2>Store Data</h2>
           <code-box langs="JavaScript,Swift,Java">
             <code-example lang="JavaScript">
-var ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
-ref.set('All the things');
+              var ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
+              ref.set('All the things');
             </code-example>
             <code-example lang="Swift">
-let ref = Firebase(url: "https://&lt;your-firebase-app&gt;.firebaseio.com/message")
-ref.setValue("All the things")
+              let ref = Firebase(url: "https://&lt;your-firebase-app&gt;.firebaseio.com/message")
+              ref.setValue("All the things")
             </code-example>
             <code-example lang="Java">
-Firebase ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
-ref.setValue("All the things");
+              Firebase ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
+              ref.setValue("All the things");
             </code-example>
           </code-box>
 
@@ -196,26 +197,26 @@ ref.setValue("All the things");
 
           <code-box langs="JavaScript,Swift,Java">
             <code-example lang="JavaScript">
-var ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
-ref.on("value", function(snap) {
-  console.log(snap.val());
-});
+              var ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
+              ref.on("value", function(snap) {
+              console.log(snap.val());
+              });
             </code-example>
             <code-example lang="Swift">
-let ref = Firebase(url: "https://&lt;your-firebase-app&gt;.firebaseio.com/message")
-ref.observeEventType(.Value, withBlock: { snap in
-  println(snap.value)
-})
+              let ref = Firebase(url: "https://&lt;your-firebase-app&gt;.firebaseio.com/message")
+              ref.observeEventType(.Value, withBlock: { snap in
+              println(snap.value)
+              })
             </code-example>
             <code-example lang="Java">
-Firebase ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
-ref.addValueEventListener(new ValueEventListener() {
-  @Override
-  public void onDataChange(DataSnapshot snapshot) {
-    System.out.println(snapshot.getValue());
-  }
-  @Override public void onCancelled(FirebaseError error) { }
-});
+              Firebase ref = new Firebase("https://&lt;your-firebase-app&gt;.firebaseio.com/message");
+              ref.addValueEventListener(new ValueEventListener() {
+              @Override
+              public void onDataChange(DataSnapshot snapshot) {
+              System.out.println(snapshot.getValue());
+              }
+              @Override public void onCancelled(FirebaseError error) { }
+              });
             </code-example>
           </code-box>
 
@@ -232,8 +233,8 @@ ref.addValueEventListener(new ValueEventListener() {
           <p class="text-small">What happens when you go through a tunnel?</p>
           <br><br>
           <p class="text-small fragment">
-            Firebase clients store a local cache of your data. When the user
-            goes offline, the app still works as expected with the local cache.
+          Firebase clients store a local cache of your data. When the user
+          goes offline, the app still works as expected with the local cache.
           </p>
 
         </section>
@@ -244,8 +245,8 @@ ref.addValueEventListener(new ValueEventListener() {
           <p class="text-small">What happens when you go on a flight?</p>
           <br><br>
           <p class="text-small fragment">
-            On mobile, Firebase persists data to a local store. The app will continue
-            to work even across app restarts.
+          On mobile, Firebase persists data to a local store. The app will continue
+          to work even across app restarts.
           </p>
 
         </section>
@@ -255,10 +256,10 @@ ref.addValueEventListener(new ValueEventListener() {
 
           <code-box langs="Swift,Java">
             <code-example lang="Swift">
-Firebase.defaultConfig().persistenceEnabled = true
+              Firebase.defaultConfig().persistenceEnabled = true
             </code-example>
             <code-example lang="Java">
-Firebase.getDefaultConfig().setPersistenceEnabled(true);
+              Firebase.getDefaultConfig().setPersistenceEnabled(true);
             </code-example>
           </code-box>
 
@@ -271,35 +272,35 @@ Firebase.getDefaultConfig().setPersistenceEnabled(true);
         <section>
 
           <p class="era-point text-small">
-            Firebase supports several forms of authentication
+          Firebase supports several forms of authentication
           </p>
 
           <p class="era-point fragment">
-            Email &amp; Password
+          Email &amp; Password
           </p>
 
           <p class="era-point fragment">
-             Google
+          Google
           </p>
 
           <p class="era-point fragment">
-             Twitter
+          Twitter
           </p>
 
           <p class="era-point fragment">
-             Facebook
+          Facebook
           </p>
 
           <p class="era-point fragment">
-             Github
+          Github
           </p>
 
           <p class="era-point fragment">
-             Anonymous
+          Anonymous
           </p>
 
           <p class="era-point fragment">
-             ...and even custom backends
+          ...and even custom backends
           </p>
 
         </section>
@@ -310,36 +311,36 @@ Firebase.getDefaultConfig().setPersistenceEnabled(true);
 
           <code-box langs="JavaScript,Swift,Java">
             <code-example lang="JavaScript" prop="one">
-// Login with Google
-ref.authWithOAuthPopup('google', function(error, authData) {
-  console.log(authData);
-});
+              // Login with Google
+              ref.authWithOAuthPopup('google', function(error, authData) {
+              console.log(authData);
+              });
             </code-example>
 
             <code-example lang="Swift">
-ref.authWithOAuthProvider("google", token: "&lt;OAuth Token&gt;",
-    withCompletionBlock: { error, authData in
-    if error != nil {
-        // Error authenticating with Firebase with OAuth token
-    } else {
-        // User is now logged in!
-        println("Successfully logged in! \(authData)")
-    }
-})
+              ref.authWithOAuthProvider("google", token: "&lt;OAuth Token&gt;",
+              withCompletionBlock: { error, authData in
+              if error != nil {
+              // Error authenticating with Firebase with OAuth token
+              } else {
+              // User is now logged in!
+              println("Successfully logged in! \(authData)")
+              }
+              })
             </code-example>
 
             <code-example lang="Java">
-ref.authWithOAuthToken("google", "&lt;OAuth Token&gt;", new Firebase.AuthResultHandler() {
-    @Override
-    public void onAuthenticated(AuthData authData) {
-        // the Google user is now authenticated with your Firebase app
-    }
+              ref.authWithOAuthToken("google", "&lt;OAuth Token&gt;", new Firebase.AuthResultHandler() {
+              @Override
+              public void onAuthenticated(AuthData authData) {
+              // the Google user is now authenticated with your Firebase app
+              }
 
-    @Override
-    public void onAuthenticationError(FirebaseError firebaseError) {
-        // there was an error
-    }
-});
+              @Override
+              public void onAuthenticationError(FirebaseError firebaseError) {
+              // there was an error
+              }
+              });
             </code-example>
 
           </code-box>
@@ -352,33 +353,33 @@ ref.authWithOAuthToken("google", "&lt;OAuth Token&gt;", new Firebase.AuthResultH
 
           <code-box langs="JavaScript,Swift,Java">
             <code-example lang="JavaScript" prop="one">
-// Listen for authentcated users
-ref.onAuth(function(authData) {
-  if(authData) {
-    console.log('User is logged in!');
-  }
-});
+              // Listen for authentcated users
+              ref.onAuth(function(authData) {
+              if(authData) {
+              console.log('User is logged in!');
+              }
+              });
             </code-example>
 
             <code-example lang="Swift">
-// Listen for authenticated users
-ref.observeAuthEventWithBlock { authData in
-    if authData != nil {
-        println("User is logged in! \(authData)")
-    }
-}
+              // Listen for authenticated users
+              ref.observeAuthEventWithBlock { authData in
+              if authData != nil {
+              println("User is logged in! \(authData)")
+              }
+              }
             </code-example>
 
             <code-example lang="Java">
-// Listen for authentcated users
-ref.addAuthStateListener(new Firebase.AuthStateListener() {
-    @Override
-    public void onAuthStateChanged(AuthData authData) {
-        if (authData != null) {
-            System.out.println("User is logged in!");
-        }
-    }
-});
+              // Listen for authentcated users
+              ref.addAuthStateListener(new Firebase.AuthStateListener() {
+              @Override
+              public void onAuthStateChanged(AuthData authData) {
+              if (authData != null) {
+              System.out.println("User is logged in!");
+              }
+              }
+              });
             </code-example>
 
           </code-box>
@@ -392,61 +393,61 @@ ref.addAuthStateListener(new Firebase.AuthStateListener() {
         <section>
           <h3>Security</h3>
           <p class="era-point">
-            By default everyone can write and read
+          By default everyone can write and read
           </p>
-					<pre>
-						<code data-trim class="json">
+          <pre>
+            <code data-trim class="json">
 {
   "rules": {
     ".read": true,
     ".write": true,
   }
 }
-						</code>
-					</pre>
+            </code>
+          </pre>
         </section>
 
         <section>
           <p class="era-point">
-            Everyone can read, but no one can write
+          Everyone can read, but no one can write
           </p>
-					<pre>
-						<code data-trim class="json">
+          <pre>
+            <code data-trim class="json">
 {
   "rules": {
     ".read": true,
     ".write": false,
   }
 }
-						</code>
-					</pre>
+            </code>
+          </pre>
         </section>
 
         <section>
           <p class="era-point">
-            Secure specific parts of your Firebase
+          Secure specific parts of your Firebase
           </p>
-					<pre>
-						<code data-trim class="json">
+          <pre>
+            <code data-trim class="json">
 {
   "rules": {
     ".read": true,
     ".write": false,
     "message": {
-      ".write": true 
+      ".write": true
     }
   }
 }
-						</code>
-					</pre>
+            </code>
+          </pre>
         </section>
 
         <section>
           <p class="era-point">
-            Special variables to power authentication
+          Special variables to power authentication
           </p>
-					<pre>
-						<code data-trim class="json">
+          <pre>
+            <code data-trim class="json">
 {
   "rules": {
     ".read": true,
@@ -456,16 +457,16 @@ ref.addAuthStateListener(new Firebase.AuthStateListener() {
     }
   }
 }
-						</code>
-					</pre>
+            </code>
+          </pre>
         </section>
 
 
         <section>
-					<h3>Security</h3>
-					<p class="text-small">Use $wildcards as route parameters</p>
-					<pre>
-						<code data-trim class="json">
+          <h3>Security</h3>
+          <p class="text-small">Use $wildcards as route parameters</p>
+          <pre>
+            <code data-trim class="json">
 {
   "rules": {
     ".read": false,
@@ -478,44 +479,44 @@ ref.addAuthStateListener(new Firebase.AuthStateListener() {
     }
   }
 }
-						</code>
-					</pre>
+            </code>
+          </pre>
 
-				</section>
+        </section>
 
         <section>
           <img src="images/hosting-box.png" class="no-style framework-logo">
         </section>
 
-  			<section>
-  					<h3>Hosting</h3>
-  					<p class="text-small">When you're ready to launch</p>
-  					<pre>
-  						<code data-trim class="bash">
+        <section>
+          <h3>Hosting</h3>
+          <p class="text-small">When you're ready to launch</p>
+          <pre>
+              <code data-trim class="bash">
 firebase init
 # select your firebase
 firebase deploy
 # party time
-  						</code>
-  					</pre>
-  			</section>
+              </code>
+          </pre>
+        </section>
 
         <section>
-					<h3>Hosting</h3>
-					<p class="text-small era-point">Production-grade</p>
+          <h3>Hosting</h3>
+          <p class="text-small era-point">Production-grade</p>
           <p class="text-small era-point">Static Asset</p>
-					<p class="text-small era-point">Free SSL</p>
-					<p class="text-small era-point">CDN cached assets</p>
-					<p class="text-small era-point">One click rollbacks</p>
-				</section>
+          <p class="text-small era-point">Free SSL</p>
+          <p class="text-small era-point">CDN cached assets</p>
+          <p class="text-small era-point">One click rollbacks</p>
+        </section>
 
         <section>
           <h1>(Optional) Live Coding</h1>
         </section>
 
         <section>
-					<h3>Tooling & Integration</h3>
-				</section>
+          <h3>Tooling & Integration</h3>
+        </section>
 
 
         <section>
@@ -527,19 +528,19 @@ firebase deploy
         </section>
 
         <section>
-					<h3>AngularFire</h3>
-					<p class="text">A chat app in AngularFire</p>
-					<pre>
-						<code data-trim class="javascript">
+          <h3>AngularFire</h3>
+          <p class="text">A chat app in AngularFire</p>
+          <pre>
+            <code data-trim class="javascript">
 var app = app.module('app', ['firebase']);
 app.controller('ChatCtrl', function($scope, $firebaseArray) {
   var ref = new Firebase('https://&lt;your-firebase&gt;.firebaseio.com/messages');
   $scope.messages = $firebaseArray(ref);
 });
-						</code>
-					</pre>
-					<pre>
-						<code data-trim class="html">
+            </code>
+          </pre>
+          <pre>
+            <code data-trim class="html">
 &lt;html&gt;
   &lt;body ng-app="app"&gt;
     &lt;div ng-controller="ChatCtrl"&gt;
@@ -547,33 +548,33 @@ app.controller('ChatCtrl', function($scope, $firebaseArray) {
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-						</code>
-					</pre>
-				</section>
+            </code>
+          </pre>
+        </section>
 
         <section>
-					<h3>Geofire</h3>
-					<p class="text-smaller">Store and query items based on their geographic location in realtime</p>
-					<iframe src="https://geofire.firebaseapp.com/sfVehicles/" height="450px" width="100%"></iframe>
-				</section>
+          <h3>Geofire</h3>
+          <p class="text-smaller">Store and query items based on their geographic location in realtime</p>
+          <iframe src="https://geofire.firebaseapp.com/sfVehicles/" height="450px" width="100%"></iframe>
+        </section>
 
-				<section>
-					<h3>Well Documented</h3>
-					<a class="text-tarheel" href="https://firebase.com/docs">
-						<img src="images/docs-site.png">
-					</a>
-				</section>
+        <section>
+          <h3>Well Documented</h3>
+          <a class="text-tarheel" href="https://firebase.com/docs">
+            <img src="images/docs-site.png">
+          </a>
+        </section>
 
         <section>
           <h4>Firebase meta-data</h4>
           <p class="era-point">
-            <span id="current-devs">170,000+</span> registered developers
+          <span id="current-devs">170,000+</span> registered developers
           </p>
           <p class="era-point">
-            1M concurrent users on Firebase sites
+          1M concurrent users on Firebase sites
           </p>
           <p class="era-point">
-            Joined Google October, 2014
+          Joined Google October, 2014
           </p>
         </section>
 
@@ -596,25 +597,29 @@ app.controller('ChatCtrl', function($scope, $firebaseArray) {
         </section>
 
         <section>
-					<h2>Focus on your app</h2>
-					<p class="era-point">The user doesn't care about the backend</p>
-					<p class="era-point">What matters is that your app is
-						<span class="text-tarheel">fast and enjoyable</span>
-					</p>
-				</section>
+          <h2>Focus on your app</h2>
+          <p class="era-point">The user doesn't care about the backend</p>
+          <p class="era-point">What matters is that your app is
+          <span class="text-tarheel">fast and enjoyable</span>
+          </p>
+        </section>
 
         <section>
-					<h2>Complete Platform</h2>
-					<img src="images/data-box.png" class="no-style framework-logo">
-					<img src="images/security-box.png" class="no-style framework-logo">
-					<img src="images/login-box.png" class="no-style framework-logo">
-					<img src="images/hosting-box.png" class="no-style framework-logo">
-				</section>
+          <h2>Complete Platform</h2>
+          <img src="images/data-box.png" class="no-style framework-logo">
+          <img src="images/security-box.png" class="no-style framework-logo">
+          <img src="images/login-box.png" class="no-style framework-logo">
+          <img src="images/hosting-box.png" class="no-style framework-logo">
+        </section>
 
         <section>
           <h1>ASK ME QUESTIONS</h1>
-          <h5>YOUR_NAME / <a href="http://twitter.com/YOUR_TWITTER_HANDLE">@YOUR_TWITTER_HANDLE</a></h5>
-          <h5>YOUR_JOB / <a href="http://twitter.com/YOUR_COMPANY_TWITTER_HANDLE">@YOUR_COMPANY</a></h5>
+          <h5>David Wu <br> High School Student & Software Engineer </h5><br> 
+          <h5> 
+            <a href="http://twitter.com/pl4gue">@__pl4gue</a> /
+            <a href="https://github.com/Pl4gue">github.com/Pl4gue</a>
+            <a href="http://david-wu.me">david-wu.me</a>
+          </h5>
         </section>
 
         <section>
@@ -681,13 +686,13 @@ app.controller('ChatCtrl', function($scope, $firebaseArray) {
         }
       }
 
-      Reveal.addEventListener( 'ready', function( event ) {
-        signPostEra( event );
-      });
+Reveal.addEventListener( 'ready', function( event ) {
+  signPostEra( event );
+});
 
-      Reveal.addEventListener( 'slidechanged', function( event ) {
-        signPostEra( event );
-      });
+Reveal.addEventListener( 'slidechanged', function( event ) {
+  signPostEra( event );
+});
 
     </script>
   </body>
