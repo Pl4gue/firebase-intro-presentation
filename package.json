@@ -1,11 +1,11 @@
 {
-  "name": "firebase-intro",
-  "description": "Firebase stock deck",
-  "homepage": "https://github.com/davideast/firebase-intro",
-  "author": "David East <deast@google.com> (https://www.firebase.com)",
+  "name": "firebase-101",
+  "description": "An introduction to Firebase",
+  "homepage": "https://github.com/flxwu/firebase-101",
+  "author": "Felix Wu <mail@flxwu.com> (http://www.flxwu.com)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/davideast/firebase-intro.git"
+    "url": "git://github.com/flxwu/firebase-101.git"
   },
   "licenses": [
     {
