@@ -1,14 +1,14 @@
 {
-  "name": "Firebase-Deck",
-  "version": "0.0.5",
-  "homepage": "https://github.com/davideast/firebase-intro",
+  "name": "intro-to-firebase",
+  "version": "1.0.0",
+  "homepage": "https://github.com/flxwu/intro-to-firebase",
   "authors": [
-    "David East <david@firebase.com>"
+    "Felix Wu <mail@flxwu.com>"
   ],
-  "description": "An introduction to Firebase Deck",
+  "description": "An introduction to Firebase",
   "main": "index.html",
   "keywords": [
-    "Firebase"
+    "Firebase", "Cloud", "Hosting", "Authentication", "Database", "Presentation"
   ],
   "license": "MIT",
   "ignore": [
