@@ -1,0 +1,69 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js start
+
+PATH: 
+  /home/pl4gue/bin:/home/pl4gue/.local/bin:/home/pl4gue/.rvm/gems/ruby-2.4.1/bin:/home/pl4gue/.rvm/gems/ruby-2.4.1@global/bin:/home/pl4gue/.rvm/rubies/ruby-2.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/altera/16.1//quartus/bin:/opt/altera/16.1//quartus/sopc_builder/bin:/opt/altera/16.1//modelsim_ase/linuxaloem:/snap/bin:/home/pl4gue/.rvm/bin:/home/pl4gue/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games/:~/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/172.3544.35/bin:/home/pl4gue/.local/bin:/home/pl4gue/Program_Files/pycharm-community-2017.1.5/bin/:/opt/JavaFXSceneBuilder2.0/:/home/pl4gue/Program_Files/netbeans-8.2/bin:/home/pl4gue/Program_Files/FileZilla3/bin/:/opt/sublime_text/:/home/pl4gue/Program_Files/anaconda3/bin:/home/pl4gue/Programming/IdeaProjects/CGOP/:/home/pl4gue/Program_Files/jetbrains-toolbox-1.2.2314/:/home/pl4gue/Program_Files/android-studio/bin:/home/pl4gue/pri/Programs/Computer/Scripts:/home/pl4gue/Program_Files/bin/:/home/pl4gue/Program_Files/firefox:/home/pl4gue/Program_Files/node-v8.9.1-linux-x64/bin/:/home/pl4gue/Program_Files/jdk1.8.0_111/bin:/home/pl4gue/Program_Files/Android/sdk/bin:/home/pl4gue/.rvm/bin:/opt/altera/16.1//quartus/bin:/opt/altera/16.1//quartus/sopc_builder/bin:/opt/altera/16.1//modelsim_ase/linuxaloem:/home/pl4gue/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games/:~/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/172.3544.35/bin:/home/pl4gue/.local/bin:/home/pl4gue/Program_Files/pycharm-community-2017.1.5/bin/:/opt/JavaFXSceneBuilder2.0/:/home/pl4gue/Program_Files/netbeans-8.2/bin:/home/pl4gue/Program_Files/FileZilla3/bin/:/opt/sublime_text/:/home/pl4gue/Program_Files/anaconda3/bin:/home/pl4gue/Programming/IdeaProjects/CGOP/:/home/pl4gue/Program_Files/jetbrains-toolbox-1.2.2314/:/home/pl4gue/Program_Files/android-studio/bin:/home/pl4gue/pri/Programs/Computer/Scripts:/home/pl4gue/Program_Files/bin/:/home/pl4gue/Program_Files/firefox:/home/pl4gue/Program_Files/node-v8.9.1-linux-x64/bin/:/home/pl4gue/Program_Files/jdk1.8.0_111/bin:/home/pl4gue/Program_Files/Android/sdk/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.4
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "firebase-intro",
+    "description": "Firebase stock deck",
+    "homepage": "https://github.com/davideast/firebase-intro",
+    "author": "David East <deast@google.com> (https://www.firebase.com)",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/davideast/firebase-intro.git"
+    },
+    "licenses": [
+      {
+        "type": "MIT",
+        "url": "https://github.com/hakimel/reveal.js/blob/master/LICENSE"
+      }
+    ],
+    "dependencies": {
+      "underscore": "~1.5.1",
+      "express": "~2.5.9",
+      "mustache": "2.2.1",
+      "socket.io": "~0.9.13"
+    },
+    "devDependencies": {
+      "grunt-contrib-qunit": "~0.2.2",
+      "grunt-contrib-jshint": "~0.6.4",
+      "grunt-contrib-cssmin": "~0.4.1",
+      "grunt-contrib-uglify": "~0.2.4",
+      "grunt-contrib-watch": "~0.5.3",
+      "grunt-contrib-sass": "~0.5.0",
+      "grunt-contrib-connect": "~0.4.1",
+      "grunt-zip": "~0.7.0",
+      "grunt": "~0.4.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command "start" not found.
+      at new MessageError (/usr/share/yarn/lib/cli.js:186:110)
+      at /usr/share/yarn/lib/cli.js:87307:17
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:98:30)
+      at /usr/share/yarn/lib/cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (/usr/share/yarn/lib/cli.js:23451:28)
+      at /usr/share/yarn/lib/cli.js:95:12
+      at runCommand (/usr/share/yarn/lib/cli.js:87312:22)
+      at Object.<anonymous> (/usr/share/yarn/lib/cli.js:87412:14)
